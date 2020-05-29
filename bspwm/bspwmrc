@@ -19,7 +19,7 @@ bspc config single_monocle true
 killall sxhkd; sxhkd &
 
 # launch wallpaper daemon
-feh --bg-fill ~/Pictures/wallpaper.jpg &
+feh --bg-fill ~/wallpaper.jpg &
 
 # launch Xresources
 xrdb .Xresources
