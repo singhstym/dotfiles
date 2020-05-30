@@ -9,6 +9,7 @@ This is my personal configuration for my bspwm window manager as well as my Arch
 - **Icons**: Papirus
 - **Color Scheme**: [Gruvbox (Dark)](https://github.com/morhetz/gruvbox)
 - **Compositor**: None (I don't like opacity in my terminal, it makes it harder to see information)
+- **AUR Package Manager**: [Yay](https://github.com/Jguer/yay)
 
 ![Screenshot of my Arch Linux environment](desktop-screenshot.png)
 
