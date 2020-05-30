@@ -36,14 +36,21 @@ This is my personal configuration for my bspwm window manager as well as my Arch
 
 ## How to use these settings
 1. Clone this repository on your local machine (preferably in your home directory).
+```console
+foo@bar:~$ git clone https://github.com/styamsingh/dotfiles.git
+```
 2. Install the packages and their dependencies:
-    - sudo pacman -Syu
-    - sudo pacman -S bspwm lightdm lightdm-webkit2-greeter ranger rxvt-unicode feh
+```console
+foo@bar:~$ sudo pacman -Syu
+foo@bar:~$ sudo pacman -S bspwm lightdm lightdm-webkit2-greeter ranger rxvt-unicode feh
+```
 3. Copy the config files to their respective directories:
-    - cp -r ~/dotfiles/bspwm/ ~/.config/
-    - cp -r ~/dotfiles/sxhkd/ ~/.config/
-    - cp -r ~/dotfiles/ranger/ ~/.config/
-    - cp ~/dotfiles/lightdm/* /etc/lightdm/
-    - cp ~/dotfiles/.Xresources .
-    - cp ~/dotfiles/wallpaper.jpg .
+```console
+foo@bar:~$ cp -r ~/dotfiles/bspwm/ ~/.config/
+foo@bar:~$ cp -r ~/dotfiles/sxhkd/ ~/.config/
+foo@bar:~$ cp -r ~/dotfiles/ranger/ ~/.config/
+foo@bar:~$ cp ~/dotfiles/lightdm/* /etc/lightdm/
+foo@bar:~$ ~/dotfiles/.Xresources .
+foo@bar:~$ ~/dotfiles/wallpaper.jpg .
+```
 4. Reboot
