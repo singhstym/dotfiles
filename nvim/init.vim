@@ -1,21 +1,37 @@
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
-	" Functionality
-	Plug 'tpope/vim-sensible'
-	Plug 'tpope/vim-commentary'
-	" Customization
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'morhetz/gruvbox'
+  " Functionality
+  Plug 'valloric/youcompleteme'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-sensible'
+  Plug 'preservim/nerdtree'
+  Plug 'tpope/vim-commentary'
+  Plug 'jiangmiao/auto-pairs'
+  " Customization
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Settings
-set tabstop=2
+syntax on
+
+set noerrorbells
+set tabstop=2 softtabstop=2
 set shiftwidth=2
-set showtabline=2
-set relativenumber
+set expandtab
+set smartindent
+set nu
+set nowrap
+set smartcase
+set noswapfile
+set incsearch
 set cursorline
-set noshowmode
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
 colorscheme gruvbox
 
 " Vim Airline
