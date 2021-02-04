@@ -1,52 +1,25 @@
-" Plugins
-call plug#begin('~/.config/nvim/plugged')
-  " Functionality
-  Plug 'valloric/youcompleteme'
-  Plug 'sheerun/vim-polyglot'
-  Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-sensible'
-  Plug 'preservim/nerdtree'
-  Plug 'tpope/vim-commentary'
-  Plug 'jiangmiao/auto-pairs'
-  " Customization
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'morhetz/gruvbox'
-call plug#end()
-
-" Settings
-syntax on
-
+set relativenumber
+set number
+set nohlsearch
+set hidden
 set noerrorbells
-set tabstop=2 softtabstop=2
-set shiftwidth=2
+set tabstop=4 softtabstop=4
+set shiftwidth=4
 set expandtab
 set smartindent
-set nu
 set nowrap
-set smartcase
-set noswapfile
-set incsearch
-set cursorline
-
+set termguicolors
+set scrolloff=8
 set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
+set signcolumn=yes
 
-colorscheme gruvbox
+call plug#begin('$HOME/.config/nvim/plugged')
+Plug 'tpope/vim-sensible'
+Plug 'preservim/nerdtree'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+call plug#end()
 
-" Vim Airline
+colorscheme onehalfdark
 
-" enable tabline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
-
-" enable powerline fonts
-let g:airline_powerline_fonts = 1
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-
-" Switch to your current theme
-let g:airline_theme = 'base16_gruvbox_dark_hard' 
+let mapleader=" "
+nnoremap <leader>q :NERDTreeToggle<CR>
