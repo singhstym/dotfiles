@@ -1,3 +1,4 @@
+set clipboard+=unnamedplus
 set relativenumber
 set number
 set nohlsearch
@@ -15,11 +16,9 @@ set signcolumn=yes
 
 call plug#begin('$HOME/.config/nvim/plugged')
 Plug 'tpope/vim-sensible'
-Plug 'preservim/nerdtree'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 call plug#end()
 
 colorscheme onehalfdark
 
 let mapleader=" "
-nnoremap <leader>q :NERDTreeToggle<CR>

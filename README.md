@@ -1,68 +1,24 @@
 # dotfiles
 
-### Hi there! 👋
+![dotfiles screenshot](./dotfiles.png)
 
-This is my personal configuration for my bspwm window manager as well as my Arch Linux environment as a whole.
+## Installing
 
-### Here are some details about my linux environment:
+You will need `git` and GNU `stow`
 
--   **WM**: bspwm
--   **Terminal**: URxvt
--   **Font**: [Iosevka](https://github.com/be5invis/Iosevka)
--   **Icons**: Papirus
--   **Color Scheme**: [Gruvbox (Dark)](https://github.com/morhetz/gruvbox)
--   **Compositor**: None (I don't like opacity in my terminal, it makes it harder to see information)
--   **AUR Package Manager**: [Yay](https://github.com/Jguer/yay)
+Clone into your `$HOME` directory or `~`
 
-![Screenshot of my Arch Linux environment](desktop-screenshot.png)
-
-## Environment Details
-
-| Category                 | Packages/Programs                                                                                                      |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| **Distribution**         | Arch Linux                                                                                                             |
-| **Window Manager**       | [bspwm](https://github.com/baskerville/bspwm) with [sxhkd](https://github.com/baskerville/sxhkd) as keybindings daemon |
-| **Shell**                | Bash                                                                                                                   |
-| **Terminal**             | [URxvt](http://software.schmorp.de/pkg/rxvt-unicode.html)                                                              |
-| **Display Manager**      | [LightDM](https://github.com/canonical/lightdm) with [webkit2-greeter](https://github.com/antergos/web-greeter)        |
-| **Apps Launcher**        | [dmenu](https://tools.suckless.org/dmenu/)                                                                             |
-| **Text Editor (CLI)**    | Neovim                                                                                                                 |
-| **Text Editor (GUI)**    | VSCode                                                                                                                 |
-| **File Manager (CLI)**   | [ranger](http://ranger.github.io/)                                                                                     |
-| **File Manager (GUI)**   | PCManFM                                                                                                                |
-| **Sound Mixer**          | Pulseaudio                                                                                                             |
-| **Sound Control**        | Pavucontrol                                                                                                            |
-| **Network Manager**      | [NetworkManager](https://wiki.gnome.org/Projects/NetworkManager/)                                                      |
-| **Image Viewer**         | [feh](https://feh.finalrewind.org/)                                                                                    |
-| **Screenshot App**       | [scrot](https://github.com/resurrecting-open-source-projects/scrot)                                                    |
-| **System Monitor (CLI)** | htop                                                                                                                   |
-
-**You can get the wallpaper [here](wallpaper.jpg)**.
-
-## How to use these settings
-
-1.  Clone this repository on your local machine (preferably in your home directory).
-
-```console
-foo@bar:~$ git clone https://github.com/styamsingh/dotfiles.git
+```bash
+git clone https://github.com/singhstym/dotfiles.git ~
 ```
 
-2.  Install the packages and their dependencies:
+Run `stow` to symlink everything or select what you want
 
-```console
-foo@bar:~$ sudo pacman -Syu
-foo@bar:~$ sudo pacman -S bspwm lightdm lightdm-webkit2-greeter ranger rxvt-unicode feh
+```bash
+stow */ # For everything
 ```
 
-3.  Copy the config files to their respective directories:
-
-```console
-foo@bar:~$ cp -r ~/dotfiles/bspwm/ ~/.config/
-foo@bar:~$ cp -r ~/dotfiles/sxhkd/ ~/.config/
-foo@bar:~$ cp -r ~/dotfiles/ranger/ ~/.config/
-foo@bar:~$ cp ~/dotfiles/lightdm/* /etc/lightdm/
-foo@bar:~$ ~/dotfiles/.Xresources .
-foo@bar:~$ ~/dotfiles/wallpaper.jpg .
+```bash
+stow alacritty # For just the alacritty config
+stow polybar # For just the polybar config
 ```
-
-4.  Reboot

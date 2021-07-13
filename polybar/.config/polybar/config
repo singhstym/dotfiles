@@ -1,0 +1,154 @@
+[colors]
+background = #282c34
+foreground = #abb2bf
+alert = #e06c75
+black = #5d677a
+green = #98c379
+yellow = #e5c07b
+blue = #61afef
+magenta = #c678dd
+cyan = #56b6c2
+white = #dcdfe4
+
+[bar/bar]
+height = 25
+width = 100%
+background = ${colors.background}
+foreground = ${colors.foreground}
+bottom = false
+line-size = 1
+
+font-0 = JetBrains Mono:style=Bold:size=10;2
+font-1 = Font Awesome 5 Free:style=Solid:size=9;2
+font-2 = Font Awesome 5 Free:style=Regular:size=9;2
+font-3 = Font Awesome 5 Brands:style=Regular:size=9;2
+font-4 = Noto Color Emoji:style=Regular:scale=9;2
+
+wm-restack = bspwm
+tray-position = right
+tray-background = ${colors.black}
+tray-padding = 10
+
+modules-left = bspwm
+modules-center = xwindow
+modules-right = updates pulseaudio network date powermenu
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+inline-mode = true
+enable-click = true
+enable-scroll = true
+reverse-scroll = false
+
+format = <label-state>
+
+label-focused = %index%
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.green}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-urgent = %index%
+xxlabel-urgent-foreground = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty =
+
+[module/xwindow]
+type = internal/xwindow
+
+label = %title%
+label-maxlen = 100
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-padding = 2
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = false
+
+label-open = 
+label-open-foreground = ${colors.background}
+label-open-background = ${colors.green}
+label-open-padding = 2
+
+label-close = 
+label-close-foreground = ${colors.background}
+label-close-background = ${colors.foreground}
+label-close-padding = 2
+
+menu-0-0 = 
+menu-0-0-exec = xset dpms force off
+menu-0-0-padding = 2
+menu-0-1 = 
+menu-0-1-exec = bspc quit
+menu-0-1-padding = 2
+menu-0-2 = 
+menu-0-2-exec = systemctl suspend
+menu-0-2-padding = 2
+menu-0-3 = 
+menu-0-3-exec = reboot
+menu-0-3-padding = 2
+menu-0-4 = 
+menu-0-4-exec = poweroff
+menu-0-4-padding = 2
+
+[module/date]
+type = internal/date
+
+interval = 5
+time  = %H:%M
+time-alt = %H:%M:%S
+date = %Y-%m-%d%
+date-alt = %A, %d %B %Y
+
+label = %time% %date%
+
+format-prefix = " "
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.blue}
+format-foreground = ${colors.background}
+format-background = ${colors.blue}
+format-padding = 2
+
+[module/network]
+type = internal/network
+interface = enp35s0
+interval = 3.0
+ 
+format-connected = <label-connected>
+label-connected = 
+label-connected-foreground = ${colors.background}
+label-connected-background = ${colors.magenta}
+label-connected-padding = 2
+
+format-disconnected = <label-disconnected>
+label-disconnected = 
+label-disconnected-foreground = ${colors.background}
+label-disconnected-background = ${colors.magenta}
+label-disconnected-padding = 2
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+use-ui-max = true
+interval = 5
+click-right = alacritty --class pulsemixer -e pulsemixer
+
+format-volume = <ramp-volume> <label-volume>
+format-volume-foreground = ${colors.background}
+format-volume-background = ${colors.yellow}
+format-volume-padding = 2
+
+label-muted =  Muted
+label-muted-foreground = ${colors.background}
+label-muted-background = ${colors.yellow}
+label-muted-padding = 2
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
