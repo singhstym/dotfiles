@@ -24,9 +24,10 @@ configuration {
 
 window {
   transparency: "screenshot";
-	location: center;
-	background-color: #282c34dd;
-	width: 30%;
+  location: center;
+  background-color: #282c34dd;
+  width: 30%;
+  border-radius: 5px;
 }
 
 mainbox {
@@ -53,11 +54,11 @@ entry {
 }
 
 listview {
-	padding: 5px 5px;
+  padding: 5px 5px;
   spacing: 5px;
-	fixed-height: false;
-	scrollbar: false;
-	lines: 5;
+  fixed-height: false;
+  scrollbar: false;
+  lines: 5;
 }
 
 element {

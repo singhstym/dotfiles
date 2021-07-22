@@ -1,0 +1,9 @@
+[user]
+    name = Satyam Singh
+    email = stymsingh@outlook.com
+[core]
+    editor = nvim
+[github]
+    user = singhstym
+[color]
+    ui = true
