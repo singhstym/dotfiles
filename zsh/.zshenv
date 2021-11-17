@@ -14,6 +14,7 @@ export GOPATH="$XDG_DATA_HOME"/go
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GTK_RC_FILES="$XDG_CONFIG_HOME"/gtk-1.0/gtkrc
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export GTK_THEME=Adwaita:dark
 export ZDOTDIR=$HOME/.config/zsh
 export HISTFILE="$XDG_DATA_HOME"/zsh/history
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
@@ -33,7 +34,7 @@ export IMAGE="sxiv"
 export COLORTERM="truecolor"
 export OPENER="xdg-open"
 export PAGER="less"
-export WM="bspwm"
+export WM="i3"
 
 # Path
 export PATH="$HOME/.local/bin:$PATH"
