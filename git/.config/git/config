@@ -1,6 +1,8 @@
 [user]
     name = Satyam Singh
     email = stymsingh@outlook.com
+[init]
+  defaultBranch = main
 [core]
     editor = nvim
 [github]
