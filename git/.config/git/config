@@ -4,8 +4,8 @@
 [init]
   defaultBranch = main
 [core]
-    editor = nvim
+	editor = code --wait
 [github]
-    user = singhstym
+    user = stym-singh
 [color]
     ui = true
