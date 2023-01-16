@@ -93,6 +93,7 @@ alias mkdir='mkdir -vp'
 alias rm='rm -i'
 alias df='df -h'
 alias free='free -m'
+alias lg='lazygit'
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
